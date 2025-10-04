@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usage Guide - Enhanced Beam Analyzer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --success-color: #27ae60;
+            --light-bg: #f8f9fa;
+            --dark-text: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 100px 0 60px 0;
+            text-align: center;
+        }
+        
+        .step-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--secondary-color);
+            transition: transform 0.3s ease;
+        }
+        
+        .step-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .step-number {
+            background: var(--secondary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .info-box {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .screenshot {
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin: 1rem 0;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .back-to-home {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+        
+        .toc {
+            background: var(--light-bg);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .toc h5 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .toc ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .toc li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .toc a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        
+        .toc a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Back to Home Button -->
+    <a href="index.html" class="btn btn-outline-light back-to-home">
+        <i class="fas fa-arrow-left me-2"></i>Back to Home
+    </a>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1><i class="fas fa-book me-3"></i>Complete Usage Guide</h1>
+            <p class="lead">Step-by-step instructions for using the Enhanced Beam Analyzer</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container py-5">
+        
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h5><i class="fas fa-list me-2"></i>Table of Contents</h5>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul>
+                        <li><a href="#installation">1. Installation & Setup</a></li>
+                        <li><a href="#data-format">2. Data Format Requirements</a></li>
+                        <li><a href="#basic-analysis">3. Basic Analysis Workflow</a></li>
+                        <li><a href="#material-selection">4. Material & Section Selection</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul>
+                        <li><a href="#optimization">5. AI Optimization</a></li>
+                        <li><a href="#visualization">6. Visualization & Results</a></li>
+                        <li><a href="#reporting">7. Reporting & Export</a></li>
+                        <li><a href="#troubleshooting">8. Troubleshooting</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Installation -->
+        <section id="installation">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Installation & Setup</h3>
+                <p class="lead">Get the Enhanced Beam Analyzer running on your system.</p>
+                
+                <h5>System Requirements:</h5>
+                <ul>
+                    <li>Python 3.7 or higher</li>
+                    <li>4GB RAM (8GB recommended)</li>
+                    <li>Windows, macOS, or Linux</li>
+                    <li>Internet connection for initial setup</li>
+                </ul>
+                
+                <h5>Installation Steps:</h5>
+                <ol>
+                    <li><strong>Download the project:</strong>
+                        <div class="code-block">git clone https://github.com/omsherikar/beam_analyzer_project.git
+cd beam_analyzer_project</div>
+                    </li>
+                    <li><strong>Create virtual environment:</strong>
+                        <div class="code-block"># Windows
+python -m venv venv
+venv\Scripts\activate
+
+# macOS/Linux
+python3 -m venv venv
+source venv/bin/activate</div>
+                    </li>
+                    <li><strong>Install dependencies:</strong>
+                        <div class="code-block">pip install -r requirements.txt</div>
+                    </li>
+                    <li><strong>Run the application:</strong>
+                        <div class="code-block">python beam_analyzer_enhanced.py</div>
+                    </li>
+                </ol>
+                
+                <div class="info-box">
+                    <i class="fas fa-info-circle me-2"></i>
+                    <strong>Note:</strong> The first run may take a few minutes to download and install all dependencies.
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Format -->
+        <section id="data-format">
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Data Format Requirements</h3>
+                <p class="lead">Prepare your beam data in the correct format for analysis.</p>
+                
+                <h5>Required CSV Format:</h5>
+                <div class="code-block">Distance (m),SF (kN),BM (kN-m)
+0.0,0.0,0.0
+0.5,-25.0,-6.25
+1.0,-50.0,-25.0
+1.5,-25.0,-56.25
+2.0,0.0,-100.0</div>
+                
+                <h5>Column Descriptions:</h5>
+                <ul>
+                    <li><strong>Distance (m):</strong> Position along the beam from 0 to beam length</li>
+                    <li><strong>SF (kN):</strong> Shear force values at each position</li>
+                    <li><strong>BM (kN-m):</strong> Bending moment values at each position</li>
+                </ul>
+                
+                <h5>Excel Format Support:</h5>
+                <p>The application also supports Excel files (.xlsx) with the same column structure.</p>
+                
+                <div class="warning-box">
+                    <i class="fas fa-exclamation-triangle me-2"></i>
+                    <strong>Important:</strong> Ensure your data is properly formatted with consistent units (meters for distance, kN for forces, kN-m for moments).
+                </div>
+            </div>
+        </section>
+
+        <!-- Basic Analysis -->
+        <section id="basic-analysis">
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Basic Analysis Workflow</h3>
+                <p class="lead">Step-by-step guide to running your first beam analysis.</p>
+                
+                <h5>Step 1: Load Data</h5>
+                <ol>
+                    <li>Click the "Browse" button next to "Beam Data File"</li>
+                    <li>Select your CSV or Excel file</li>
+                    <li>Verify the data loads correctly in the preview</li>
+                </ol>
+                
+                <h5>Step 2: Configure Analysis Parameters</h5>
+                <ol>
+                    <li><strong>Select Material:</strong> Choose from the dropdown (e.g., Steel A36)</li>
+                    <li><strong>Select Cross-Section:</strong> Choose beam type (e.g., I-beam)</li>
+                    <li><strong>Enter Dimensions:</strong> Fill in section parameters</li>
+                    <li><strong>Set Analysis Type:</strong> Enable desired analyses (Stress, Deflection, Fatigue)</li>
+                </ol>
+                
+                <h5>Step 3: Set Constraints</h5>
+                <ul>
+                    <li><strong>Maximum Deflection:</strong> Set allowable deflection limit (mm)</li>
+                    <li><strong>Minimum Safety Factor:</strong> Set required safety factor</li>
+                    <li><strong>Fatigue Life:</strong> Set minimum required cycles</li>
+                </ul>
+                
+                <h5>Step 4: Run Analysis</h5>
+                <ol>
+                    <li>Click "Run Enhanced Analysis"</li>
+                    <li>Wait for calculations to complete</li>
+                    <li>Review results in the Summary and Detailed tabs</li>
+                    <li>Examine visualizations in the plot tabs</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Material Selection -->
+        <section id="material-selection">
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <h3>Material & Cross-Section Selection</h3>
+                <p class="lead">Choose the right materials and sections for your application.</p>
+                
+                <h5>Available Materials:</h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul>
+                            <li><strong>Steel A36:</strong> General construction steel</li>
+                            <li><strong>Steel A572:</strong> High-strength structural steel</li>
+                            <li><strong>Aluminum 6061:</strong> Aerospace and automotive</li>
+                            <li><strong>Stainless Steel 316:</strong> Corrosion resistance</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul>
+                            <li><strong>Concrete C25:</strong> Standard concrete</li>
+                            <li><strong>Concrete C30:</strong> High-strength concrete</li>
+                            <li><strong>Wood Pine:</strong> Construction lumber</li>
+                            <li><strong>Wood Oak:</strong> Hardwood applications</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h5>Cross-Section Types:</h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>I-beam Parameters:</h6>
+                        <ul>
+                            <li>Height (total depth)</li>
+                            <li>Flange Width</li>
+                            <li>Flange Thickness</li>
+                            <li>Web Thickness</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Rectangular Parameters:</h6>
+                        <ul>
+                            <li>Width</li>
+                            <li>Height</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <i class="fas fa-lightbulb me-2"></i>
+                    <strong>Tip:</strong> Start with standard steel sections and use AI optimization to find the most efficient design for your specific requirements.
+                </div>
+            </div>
+        </section>
+
+        <!-- Optimization -->
+        <section id="optimization">
+            <div class="step-card">
+                <div class="step-number">5</div>
+                <h3>AI Optimization Guide</h3>
+                <p class="lead">Leverage artificial intelligence to find optimal beam designs.</p>
+                
+                <h5>Optimization Objectives:</h5>
+                <ul>
+                    <li><strong>Cost:</strong> Minimize material and construction costs</li>
+                    <li><strong>Weight:</strong> Reduce structural weight</li>
+                    <li><strong>Deflection:</strong> Minimize beam deflection</li>
+                    <li><strong>Safety Factor:</strong> Maximize safety margins</li>
+                    <li><strong>Fatigue Life:</strong> Maximize fatigue resistance</li>
+                </ul>
+                
+                <h5>How to Use AI Optimization:</h5>
+                <ol>
+                    <li>Complete a basic analysis first</li>
+                    <li>Select optimization objective from dropdown</li>
+                    <li>Set constraints (deflection limits, safety factors)</li>
+                    <li>Click "Find Optimal Design"</li>
+                    <li>Wait for genetic algorithm to complete (1-2 minutes)</li>
+                    <li>Review optimization results comparison</li>
+                    <li>Apply optimized design if satisfactory</li>
+                </ol>
+                
+                <h5>Optimization Process:</h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Genetic Algorithm:</h6>
+                        <ul>
+                            <li>Population-based search</li>
+                            <li>Evolutionary optimization</li>
+                            <li>Multi-generational improvement</li>
+                            <li>Constraint handling</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Fallback Method:</h6>
+                        <ul>
+                            <li>Systematic search if GA fails</li>
+                            <li>Material and section combinations</li>
+                            <li>Dimension scaling</li>
+                            <li>Guaranteed solution</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="warning-box">
+                    <i class="fas fa-clock me-2"></i>
+                    <strong>Time:</strong> Optimization typically takes 1-2 minutes. For complex problems, allow up to 5 minutes.
+                </div>
+            </div>
+        </section>
+
+        <!-- Visualization -->
+        <section id="visualization">
+            <div class="step-card">
+                <div class="step-number">6</div>
+                <h3>Visualization & Results</h3>
+                <p class="lead">Interpret and analyze your results using the advanced visualization system.</p>
+                
+                <h5>Plot Tabs:</h5>
+                <ul>
+                    <li><strong>Shear Force:</strong> Shear force diagram with filled areas</li>
+                    <li><strong>Bending Moment:</strong> Bending moment distribution</li>
+                    <li><strong>Stress Envelope:</strong> Stress levels with yield limits</li>
+                    <li><strong>Deflection:</strong> Deflection profile along beam</li>
+                </ul>
+                
+                <h5>Interactive Features:</h5>
+                <ul>
+                    <li>Zoom and pan using toolbar</li>
+                    <li>Save plots as high-resolution images</li>
+                    <li>Print diagrams directly</li>
+                    <li>Export data for external analysis</li>
+                </ul>
+                
+                <h5>Results Interpretation:</h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Summary Tab:</h6>
+                        <ul>
+                            <li>Key performance metrics</li>
+                            <li>Safety factor status</li>
+                            <li>Deflection compliance</li>
+                            <li>Design recommendations</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Detailed Tab:</h6>
+                        <ul>
+                            <li>Complete calculation details</li>
+                            <li>Material properties used</li>
+                            <li>Section properties</li>
+                            <li>Code compliance checks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reporting -->
+        <section id="reporting">
+            <div class="step-card">
+                <div class="step-number">7</div>
+                <h3>Reporting & Export</h3>
+                <p class="lead">Generate professional reports and export your analysis results.</p>
+                
+                <h5>PDF Report Generation:</h5>
+                <ol>
+                    <li>Complete your analysis and optimization</li>
+                    <li>Click "Generate PDF Report"</li>
+                    <li>Choose save location</li>
+                    <li>Review the comprehensive report</li>
+                </ol>
+                
+                <h5>Report Contents:</h5>
+                <ul>
+                    <li>Project information and parameters</li>
+                    <li>Material and section properties</li>
+                    <li>Analysis methodology</li>
+                    <li>Calculation results and diagrams</li>
+                    <li>Safety factor assessments</li>
+                    <li>Design recommendations</li>
+                    <li>Optimization results (if performed)</li>
+                </ul>
+                
+                <h5>Export Options:</h5>
+                <ul>
+                    <li><strong>PDF Reports:</strong> Complete analysis documentation</li>
+                    <li><strong>CSV Data:</strong> Numerical results for further analysis</li>
+                    <li><strong>High-Res Images:</strong> Publication-quality diagrams</li>
+                    <li><strong>Excel Files:</strong> Structured data with formatting</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Troubleshooting -->
+        <section id="troubleshooting">
+            <div class="step-card">
+                <div class="step-number">8</div>
+                <h3>Troubleshooting</h3>
+                <p class="lead">Common issues and their solutions.</p>
+                
+                <h5>Common Issues:</h5>
+                
+                <div class="warning-box">
+                    <h6><i class="fas fa-exclamation-triangle me-2"></i>File Loading Errors</h6>
+                    <p><strong>Problem:</strong> Cannot load beam data file</p>
+                    <p><strong>Solution:</strong> Ensure file format is CSV or Excel with correct column headers: "Distance (m)", "SF (kN)", "BM (kN-m)"</p>
+                </div>
+                
+                <div class="warning-box">
+                    <h6><i class="fas fa-exclamation-triangle me-2"></i>Optimization Timeout</h6>
+                    <p><strong>Problem:</strong> Genetic algorithm takes too long or fails</p>
+                    <p><strong>Solution:</strong> The system will automatically use fallback optimization. Reduce constraint complexity if issues persist.</p>
+                </div>
+                
+                <div class="warning-box">
+                    <h6><i class="fas fa-exclamation-triangle me-2"></i>Installation Issues</h6>
+                    <p><strong>Problem:</strong> Dependencies fail to install</p>
+                    <p><strong>Solution:</strong> Ensure Python 3.7+ is installed. Try upgrading pip: <code>pip install --upgrade pip</code></p>
+                </div>
+                
+                <div class="info-box">
+                    <h6><i class="fas fa-info-circle me-2"></i>Performance Tips</h6>
+                    <ul>
+                        <li>Close other applications to free up memory</li>
+                        <li>Use smaller data files for initial testing</li>
+                        <li>Start with simple cross-sections before complex ones</li>
+                        <li>Enable only necessary analysis types</li>
+                    </ul>
+                </div>
+                
+                <h5>Getting Help:</h5>
+                <ul>
+                    <li>Check the GitHub repository for latest updates</li>
+                    <li>Review sample data files for proper formatting</li>
+                    <li>Ensure all dependencies are correctly installed</li>
+                    <li>Contact support through GitHub issues</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2025 Enhanced Beam Analyzer Project. Built with ❤️ for the engineering community.</p>
+            <div class="mt-3">
+                <a href="index.html" class="btn btn-outline-light me-2">
+                    <i class="fas fa-home me-2"></i>Home
+                </a>
+                <a href="features.html" class="btn btn-outline-light me-2">
+                    <i class="fas fa-star me-2"></i>Features
+                </a>
+                <a href="https://github.com/omsherikar/beam_analyzer_project" class="btn btn-outline-light">
+                    <i class="fab fa-github me-2"></i>GitHub
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    
+    <script>
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - Enhanced Beam Analyzer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --success-color: #27ae60;
+            --light-bg: #f8f9fa;
+            --dark-text: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 100px 0 60px 0;
+            text-align: center;
+        }
+        
+        .feature-detail-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--secondary-color);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 1rem 0;
+        }
+        
+        .comparison-table {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-table th {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+        }
+        
+        .back-to-home {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Back to Home Button -->
+    <a href="index.html" class="btn btn-outline-light back-to-home">
+        <i class="fas fa-arrow-left me-2"></i>Back to Home
+    </a>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1><i class="fas fa-star me-3"></i>Detailed Features</h1>
+            <p class="lead">Explore the powerful capabilities of the Enhanced Beam Analyzer</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container py-5">
+        
+        <!-- AI Optimization -->
+        <div class="feature-detail-card">
+            <div class="row">
+                <div class="col-md-2 text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <h3>AI-Powered Genetic Algorithm Optimization</h3>
+                    <p class="lead">Automatically find the optimal beam design using advanced artificial intelligence.</p>
+                    
+                    <h5>Optimization Objectives:</h5>
+                    <ul>
+                        <li><strong>Cost Minimization:</strong> Find the most economical design considering material costs</li>
+                        <li><strong>Weight Reduction:</strong> Minimize structural weight for aerospace and automotive applications</li>
+                        <li><strong>Deflection Control:</strong> Optimize for minimal deflection under load</li>
+                        <li><strong>Safety Factor Maximization:</strong> Maximize safety margins for critical applications</li>
+                        <li><strong>Combined Safety Factor:</strong> Balance multiple safety criteria</li>
+                        <li><strong>Fatigue Life:</strong> Optimize for maximum fatigue life in cyclic loading</li>
+                    </ul>
+                    
+                    <h5>Algorithm Features:</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Population-based genetic algorithm</li>
+                                <li>Intelligent crossover and mutation</li>
+                                <li>Elitism preservation</li>
+                                <li>Constraint handling</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Multi-objective optimization</li>
+                                <li>Fast convergence algorithms</li>
+                                <li>Fallback systematic search</li>
+                                <li>Timeout protection</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Advanced Analysis -->
+        <div class="feature-detail-card">
+            <div class="row">
+                <div class="col-md-2 text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <h3>Advanced Engineering Analysis</h3>
+                    <p class="lead">Comprehensive structural analysis with industry-standard calculations.</p>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Stress Analysis:</h5>
+                            <ul>
+                                <li>Bending stress calculations</li>
+                                <li>Shear stress analysis</li>
+                                <li>Combined stress evaluation</li>
+                                <li>Stress concentration factors</li>
+                                <li>Von Mises stress criteria</li>
+                            </ul>
+                            
+                            <h5>Deflection Analysis:</h5>
+                            <ul>
+                                <li>Moment-area method</li>
+                                <li>Integration-based calculations</li>
+                                <li>Support condition handling</li>
+                                <li>Deflection limits checking</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Safety Factor Analysis:</h5>
+                            <ul>
+                                <li>Yield strength safety factors</li>
+                                <li>Ultimate strength safety factors</li>
+                                <li>Combined loading factors</li>
+                                <li>Code compliance checking</li>
+                            </ul>
+                            
+                            <h5>Fatigue Analysis:</h5>
+                            <ul>
+                                <li>S-N curve analysis</li>
+                                <li>Stress range calculations</li>
+                                <li>Fatigue life estimation</li>
+                                <li>Endurance limit checking</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Material Library -->
+        <div class="feature-detail-card">
+            <div class="row">
+                <div class="col-md-2 text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <h3>Comprehensive Material Library</h3>
+                    <p class="lead">Pre-loaded with extensive material properties for accurate analysis.</p>
+                    
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Material</th>
+                                    <th>E (GPa)</th>
+                                    <th>σ_yield (MPa)</th>
+                                    <th>σ_ultimate (MPa)</th>
+                                    <th>Density (kg/m³)</th>
+                                    <th>Cost Factor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Steel A36</strong></td>
+                                    <td>200</td>
+                                    <td>250</td>
+                                    <td>400</td>
+                                    <td>7850</td>
+                                    <td>1.0</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Steel A572</strong></td>
+                                    <td>200</td>
+                                    <td>345</td>
+                                    <td>450</td>
+                                    <td>7850</td>
+                                    <td>1.2</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Aluminum 6061</strong></td>
+                                    <td>69</td>
+                                    <td>276</td>
+                                    <td>310</td>
+                                    <td>2700</td>
+                                    <td>3.5</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Concrete C25</strong></td>
+                                    <td>25</td>
+                                    <td>25</td>
+                                    <td>25</td>
+                                    <td>2400</td>
+                                    <td>0.3</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Stainless Steel 316</strong></td>
+                                    <td>200</td>
+                                    <td>205</td>
+                                    <td>515</td>
+                                    <td>8000</td>
+                                    <td>4.0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cross-Section Types -->
+        <div class="feature-detail-card">
+            <div class="row">
+                <div class="col-md-2 text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-shapes"></i>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <h3>Multiple Cross-Section Types</h3>
+                    <p class="lead">Support for various beam cross-sections with automatic property calculations.</p>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Supported Sections:</h5>
+                            <ul>
+                                <li><strong>Rectangular:</strong> Width × Height</li>
+                                <li><strong>I-beam:</strong> Flange width, height, flange & web thickness</li>
+                                <li><strong>Circular:</strong> Diameter</li>
+                                <li><strong>T-beam:</strong> Flange width, height, flange & web thickness</li>
+                                <li><strong>Channel:</strong> Flange width, height, flange & web thickness</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Calculated Properties:</h5>
+                            <ul>
+                                <li>Cross-sectional area (A)</li>
+                                <li>Moment of inertia (I)</li>
+                                <li>Section modulus (S)</li>
+                                <li>Radius of gyration (r)</li>
+                                <li>Shear area (for shear stress)</li>
+                                <li>Plastic section modulus</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Visualization -->
+        <div class="feature-detail-card">
+            <div class="row">
+                <div class="col-md-2 text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <h3>Advanced Visualization System</h3>
+                    <p class="lead">Beautiful, interactive diagrams with tabbed interface for better organization.</p>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Diagram Types:</h5>
+                            <ul>
+                                <li><strong>Shear Force Diagram:</strong> Clear visualization of shear forces</li>
+                                <li><strong>Bending Moment Diagram:</strong> Bending moment distribution</li>
+                                <li><strong>Stress Envelope:</strong> Stress distribution with yield limits</li>
+                                <li><strong>Deflection Profile:</strong> Deflection along beam length</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Visual Features:</h5>
+                            <ul>
+                                <li>Large, high-resolution plots</li>
+                                <li>Professional styling and colors</li>
+                                <li>Interactive navigation tools</li>
+                                <li>Zoom and pan capabilities</li>
+                                <li>Export to high-quality images</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reporting -->
+        <div class="feature-detail-card">
+            <div class="row">
+                <div class="col-md-2 text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <h3>Professional Reporting</h3>
+                    <p class="lead">Generate comprehensive PDF reports with all analysis results and recommendations.</p>
+                    
+                    <h5>Report Contents:</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Project information and parameters</li>
+                                <li>Material and section properties</li>
+                                <li>Load case descriptions</li>
+                                <li>Analysis methodology</li>
+                                <li>Detailed calculation results</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul>
+                                <li>High-quality diagrams and plots</li>
+                                <li>Safety factor assessments</li>
+                                <li>Design recommendations</li>
+                                <li>Optimization results comparison</li>
+                                <li>Code compliance verification</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Performance -->
+        <div class="feature-detail-card">
+            <div class="row">
+                <div class="col-md-2 text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <h3>High Performance & Reliability</h3>
+                    <p class="lead">Optimized for speed and reliability with robust error handling.</p>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Performance Features:</h5>
+                            <ul>
+                                <li>Fast genetic algorithm optimization</li>
+                                <li>Efficient matrix calculations</li>
+                                <li>Memory-optimized data structures</li>
+                                <li>Parallel processing support</li>
+                                <li>Timeout protection</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Reliability Features:</h5>
+                            <ul>
+                                <li>Comprehensive error handling</li>
+                                <li>Input validation</li>
+                                <li>Fallback optimization methods</li>
+                                <li>Data integrity checks</li>
+                                <li>Graceful failure recovery</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2025 Enhanced Beam Analyzer Project. Built with ❤️ for the engineering community.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

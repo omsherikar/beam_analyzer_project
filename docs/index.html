@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Beam Analyzer - AI-Powered Structural Engineering Tool</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --light-bg: #f8f9fa;
+            --dark-text: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero-section p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            border: none;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .btn-custom {
+            background: var(--secondary-color);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-custom:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-outline-custom {
+            border: 2px solid var(--secondary-color);
+            color: var(--secondary-color);
+            background: transparent;
+        }
+        
+        .btn-outline-custom:hover {
+            background: var(--secondary-color);
+            color: white;
+        }
+        
+        .stats-section {
+            background: var(--light-bg);
+            padding: 60px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            display: block;
+        }
+        
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            margin: 1rem 0;
+        }
+        
+        .screenshot {
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-calculator me-2"></i>
+                Enhanced Beam Analyzer
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#installation">Installation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#usage">Usage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#download">Download</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1><i class="fas fa-robot me-3"></i>Enhanced Beam Analyzer</h1>
+                    <p>AI-Powered Structural Engineering Tool for Modern Engineers</p>
+                    <p class="lead">Combine traditional beam analysis with cutting-edge artificial intelligence optimization to design safer, more efficient structures.</p>
+                    <div class="mt-4">
+                        <a href="#download" class="btn btn-custom btn-lg me-3">
+                            <i class="fas fa-download me-2"></i>Download Now
+                        </a>
+                        <a href="#features" class="btn btn-outline-custom btn-lg">
+                            <i class="fas fa-info-circle me-2"></i>Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Powerful Features</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>AI Optimization</h4>
+                        <p>Genetic algorithm-based design optimization that automatically finds the best material and cross-section combinations for your specific requirements.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Advanced Analysis</h4>
+                        <p>Comprehensive beam analysis including shear forces, bending moments, stress calculations, deflection analysis, and fatigue life estimation.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h4>Interactive Visualizations</h4>
+                        <p>Beautiful tabbed interface with large, clear diagrams for shear force, bending moment, stress envelope, and deflection profiles.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h4>Material Library</h4>
+                        <p>Preloaded with comprehensive material properties including steel, aluminum, concrete with yield strength, modulus, and cost data.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shapes"></i>
+                        </div>
+                        <h4>Cross-Section Types</h4>
+                        <p>Support for multiple cross-sections including rectangular, I-beam, circular, T-beam, and channel sections with automatic property calculations.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <h4>Professional Reports</h4>
+                        <p>Generate comprehensive PDF reports with analysis results, diagrams, design recommendations, and optimization comparisons.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <span class="stat-number">6+</span>
+                        <h5>Material Types</h5>
+                        <p>Steel, Aluminum, Concrete & More</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <h5>Cross-Sections</h5>
+                        <p>I-beam, Rectangular, Circular & More</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <span class="stat-number">6</span>
+                        <h5>Optimization Objectives</h5>
+                        <p>Cost, Weight, Deflection, Safety & More</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <h5>Python Based</h5>
+                        <p>Open Source & Extensible</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Section -->
+    <section id="installation" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Quick Installation</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-terminal me-2"></i>Installation Steps</h5>
+                            <ol>
+                                <li><strong>Clone the repository:</strong>
+                                    <div class="code-block">git clone https://github.com/omsherikar/beam_analyzer_project.git</div>
+                                </li>
+                                <li><strong>Navigate to the project directory:</strong>
+                                    <div class="code-block">cd beam_analyzer_project</div>
+                                </li>
+                                <li><strong>Create virtual environment:</strong>
+                                    <div class="code-block">python -m venv venv<br>source venv/bin/activate  # On Windows: venv\Scripts\activate</div>
+                                </li>
+                                <li><strong>Install dependencies:</strong>
+                                    <div class="code-block">pip install -r requirements.txt</div>
+                                </li>
+                                <li><strong>Run the application:</strong>
+                                    <div class="code-block">python beam_analyzer_enhanced.py</div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usage Section -->
+    <section id="usage" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">How to Use</h2>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="accordion" id="usageAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#step1">
+                                    <i class="fas fa-file-upload me-2"></i>Step 1: Load Beam Data
+                                </button>
+                            </h2>
+                            <div id="step1" class="accordion-collapse collapse show" data-bs-parent="#usageAccordion">
+                                <div class="accordion-body">
+                                    <p>Load your beam data from CSV or Excel files. The file should contain columns for:</p>
+                                    <ul>
+                                        <li><strong>Distance (m):</strong> Position along the beam</li>
+                                        <li><strong>SF (kN):</strong> Shear force values</li>
+                                        <li><strong>BM (kN-m):</strong> Bending moment values</li>
+                                    </ul>
+                                    <p>Use the "Browse" button to select your data file, or try the included sample data files.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step2">
+                                    <i class="fas fa-cogs me-2"></i>Step 2: Configure Analysis Parameters
+                                </button>
+                            </h2>
+                            <div id="step2" class="accordion-collapse collapse" data-bs-parent="#usageAccordion">
+                                <div class="accordion-body">
+                                    <p>Set up your analysis parameters:</p>
+                                    <ul>
+                                        <li><strong>Material:</strong> Select from steel, aluminum, concrete, etc.</li>
+                                        <li><strong>Cross-Section:</strong> Choose beam shape and enter dimensions</li>
+                                        <li><strong>Analysis Type:</strong> Enable stress, deflection, fatigue analysis</li>
+                                        <li><strong>Constraints:</strong> Set maximum deflection, minimum safety factors</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step3">
+                                    <i class="fas fa-chart-bar me-2"></i>Step 3: Run Analysis
+                                </button>
+                            </h2>
+                            <div id="step3" class="accordion-collapse collapse" data-bs-parent="#usageAccordion">
+                                <div class="accordion-body">
+                                    <p>Click "Run Enhanced Analysis" to:</p>
+                                    <ul>
+                                        <li>Calculate shear forces and bending moments</li>
+                                        <li>Analyze stress distributions and safety factors</li>
+                                        <li>Compute deflections and fatigue life</li>
+                                        <li>Generate comprehensive visualizations</li>
+                                        <li>Display detailed analysis results</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step4">
+                                    <i class="fas fa-robot me-2"></i>Step 4: AI Optimization
+                                </button>
+                            </h2>
+                            <div id="step4" class="accordion-collapse collapse" data-bs-parent="#usageAccordion">
+                                <div class="accordion-body">
+                                    <p>Use AI optimization to find the best design:</p>
+                                    <ul>
+                                        <li>Select optimization objective (cost, weight, deflection, safety)</li>
+                                        <li>Click "Find Optimal Design" to run genetic algorithm</li>
+                                        <li>Compare original vs optimized design</li>
+                                        <li>Apply optimized parameters automatically</li>
+                                        <li>Generate optimization report</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step5">
+                                    <i class="fas fa-download me-2"></i>Step 5: Export Results
+                                </button>
+                            </h2>
+                            <div id="step5" class="accordion-collapse collapse" data-bs-parent="#usageAccordion">
+                                <div class="accordion-body">
+                                    <p>Export your analysis results:</p>
+                                    <ul>
+                                        <li><strong>PDF Report:</strong> Comprehensive analysis report with diagrams</li>
+                                        <li><strong>Data Export:</strong> Save analysis results to CSV/Excel</li>
+                                        <li><strong>Visualizations:</strong> Export high-quality plots</li>
+                                        <li><strong>Optimization Summary:</strong> Detailed optimization results</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Download & Get Started</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-rocket me-2"></i>Ready to Start?</h5>
+                            <p class="card-text">Download the Enhanced Beam Analyzer and start optimizing your structural designs today!</p>
+                            <div class="mt-4">
+                                <a href="https://github.com/omsherikar/beam_analyzer_project/archive/main.zip" class="btn btn-custom btn-lg me-3">
+                                    <i class="fas fa-download me-2"></i>Download ZIP
+                                </a>
+                                <a href="https://github.com/omsherikar/beam_analyzer_project" class="btn btn-outline-custom btn-lg">
+                                    <i class="fab fa-github me-2"></i>View on GitHub
+                                </a>
+                            </div>
+                            <div class="mt-4">
+                                <h6>System Requirements:</h6>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success me-2"></i>Python 3.7 or higher</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>4GB RAM recommended</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Windows, macOS, or Linux</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h5><i class="fas fa-calculator me-2"></i>Enhanced Beam Analyzer</h5>
+                    <p>AI-Powered Structural Engineering Tool for Modern Engineers</p>
+                </div>
+                <div class="col-lg-6 text-end">
+                    <p>&copy; 2025 Enhanced Beam Analyzer Project</p>
+                    <p>Built with ❤️ for the engineering community</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation to feature cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
