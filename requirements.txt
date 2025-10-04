@@ -1,5 +1,7 @@
-streamlit==1.22.0
-pandas==1.5.3
-numpy==1.23.5
-matplotlib==3.6.2
-fpdf2==2.7.4
+streamlit>=1.28.0
+pandas>=1.5.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+fpdf2>=2.7.0
+geneticalgorithm>=1.0.2
+openpyxl>=3.1.0
